@@ -9,17 +9,32 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { ApplicationsComponent } from './containers/applications/applications.component';
+import { AboutUsComponent } from './containers/about-us/about-us.component';
+import { UserProfileComponent } from './containers/user-profile/user-profile.component';
+import {
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatButtonModule,
+  MatListModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatMenuModule} from "@angular/material";
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    ApplicationsComponent,
+    AboutUsComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +47,15 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule,
+    MatMenuModule
   ],
   providers: [ CommonConstants],
   bootstrap: [AppComponent]
