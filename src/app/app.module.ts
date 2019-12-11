@@ -27,6 +27,7 @@ import {
   MatCardModule,
   MatFormFieldModule,
   MatMenuModule} from "@angular/material";
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import {
     NavigationComponent,
     ApplicationsComponent,
     AboutUsComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

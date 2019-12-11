@@ -1,22 +1,15 @@
-<mat-toolbar>
-  <mat-toolbar-row>
-    <span>{{title}}</span>
-    <span class="example-fill-remaining-space"></span>
-    <span>
+<mat-toolbar color="primary" class="fill-space">
+    <span>{{ title }}</span>
     <mat-menu #appMenu="matMenu">
         <button mat-menu-item aria-label="home" routerLink="">Home</button>
         <button mat-menu-item aria-label="applications" routerLink="applications">Applications</button>
         <button mat-menu-item aria-label="about us" routerLink="about-us">About Us</button>
         <button mat-menu-item aria-label="user profile" routerLink="user-profile">User Profile</button>
       </mat-menu>
+      <button mat-fab>
+        Login
+      </button>
       <button mat-icon-button [matMenuTriggerFor]="appMenu">
         <mat-icon>more_vert</mat-icon>
       </button>
-    </span>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
-    <span>Second Row</span>
-  </mat-toolbar-row>
-
 </mat-toolbar>
