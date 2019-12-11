@@ -8,7 +8,7 @@ import { CommonConstants } from './../../constants/common-constants';
 })
 export class HomeComponent implements OnInit {
   title = this.common.title;
-
+  subtitle = this.common.subtitle;
   constructor(private common: CommonConstants) { }
 
   ngOnInit() {
