@@ -1,3 +1,4 @@
+import { GenericModalService } from './../generic-modal/generic-modal.service';
 import { CommonConstants } from './../../constants/common-constants';
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -19,7 +20,16 @@ export class NavigationComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver,
-              private common: CommonConstants) {}
+              private common: CommonConstants,
+              private modalService: GenericModalService
+             ) {}
 
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
+  }
 
 }

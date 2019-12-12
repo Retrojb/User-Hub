@@ -6,4 +6,5 @@ export class CommonConstants {
   // COMMON USED PHRASES
   title = 'Welcome to Life Styles Management';
   subtitle = 'Where dreams are made';
+  testModalMessage = 'Hello Moto';
 }

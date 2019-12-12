@@ -6,10 +6,21 @@
         <button mat-menu-item aria-label="about us" routerLink="about-us">About Us</button>
         <button mat-menu-item aria-label="user profile" routerLink="user-profile">User Profile</button>
       </mat-menu>
-      <button mat-fab>
-        Login
-      </button>
       <button mat-icon-button [matMenuTriggerFor]="appMenu">
         <mat-icon>more_vert</mat-icon>
       </button>
-</mat-toolbar>
+    </mat-toolbar>
+    <div>
+      <button mat-fab (click)="openModal('generic-modal-1')">Login</button>
+      <button mat-button (click)="openModal('generic-modal-2')">Something</button>
+
+    </div>
+
+<app-generic-modal id='generic-modal-1'>
+  <h1>This modal works</h1>
+  <button (click)="closeModal('generic-modal-1');"></button>
+</app-generic-modal>
+<app-generic-modal id='generic-modal-2'>
+    <h1>This modal works</h1>
+    <button (click)="closeModal('generic-modal-2');"></button>
+  </app-generic-modal>

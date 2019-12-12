@@ -28,6 +28,24 @@ import {
   MatFormFieldModule,
   MatMenuModule} from "@angular/material";
 import { FooterComponent } from './components/footer/footer.component';
+import { GenericModalComponent } from './components/generic-modal/generic-modal.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { SocialLoginModule, AuthServiceConfig, AuthService } from "angularx-social-login";
+import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+
+export function socialMediaConfig() {
+  const config = new AuthServiceConfig([
+      {
+        id: FacebookLoginProvider.PROVIDER_ID,
+        provider: new FacebookLoginProvider('app -id')
+      },
+      {
+        id: GoogleLoginProvider.PROVIDER_ID,
+        provider: new GoogleLoginProvider('app -id')
+      }
+  ]);
+  return config;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +54,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ApplicationsComponent,
     AboutUsComponent,
     UserProfileComponent,
-    FooterComponent
+    FooterComponent,
+    GenericModalComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +79,14 @@ import { FooterComponent } from './components/footer/footer.component';
     MatTableModule,
     MatMenuModule
   ],
-  providers: [ CommonConstants],
+  providers: [
+    CommonConstants,
+    AuthService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: socialMediaConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
