@@ -32,6 +32,7 @@ import { GenericModalComponent } from './components/generic-modal/generic-modal.
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { SocialLoginModule, AuthServiceConfig, AuthService } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+import { LoginComponent } from './components/login/login.component';
 
 export function socialMediaConfig() {
   const config = new AuthServiceConfig([
@@ -56,7 +57,8 @@ export function socialMediaConfig() {
     UserProfileComponent,
     FooterComponent,
     GenericModalComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

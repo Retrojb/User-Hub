@@ -1,3 +1,5 @@
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
 import { UserProfileComponent } from './containers/user-profile/user-profile.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +20,12 @@ const routes: Routes = [
   },
   {
     path: 'user-profile', component: UserProfileComponent, data: { title: 'Welcome to the Home Page'}
+  },
+  {
+    path: 'login', component: LoginComponent, data: { title: 'Login'}
+  },
+  {
+    path: 'dashboard', component: DashboardComponent, data: { title: 'Dashboard'}
   },
 
 ];
